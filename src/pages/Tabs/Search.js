@@ -1,14 +1,14 @@
 import React from "react";
-import { IonPage, IonHeader, IonToolbar, IonTitle } from "@ionic/react";
+import { IonPage, IonContent } from "@ionic/react";
+import Header from "../../components/Header";
 
 const Search = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Search</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+      <Header title="Search" small />
+      <IonContent fullscreen>
+        <Header title="Search" />
+      </IonContent>
     </IonPage>
   );
 };

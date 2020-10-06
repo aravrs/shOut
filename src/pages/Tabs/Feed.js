@@ -1,14 +1,14 @@
 import React from "react";
-import { IonPage, IonHeader, IonToolbar, IonTitle } from "@ionic/react";
+import { IonPage, IonContent } from "@ionic/react";
+import Header from "../../components/Header";
 
 const Feed = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Feed</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+      <Header title="shOut" small />
+      <IonContent fullscreen>
+        <Header title="shOut" />
+      </IonContent>
     </IonPage>
   );
 };

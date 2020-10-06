@@ -1,14 +1,14 @@
 import React from "react";
-import { IonPage, IonHeader, IonToolbar, IonTitle } from "@ionic/react";
+import { IonPage, IonContent } from "@ionic/react";
+import Header from "../../components/Header";
 
 const Submit = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Submit</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+      <Header title="Submit" small />
+      <IonContent fullscreen>
+        <Header title="Submit" />
+      </IonContent>
     </IonPage>
   );
 };

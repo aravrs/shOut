@@ -1,14 +1,14 @@
 import React from "react";
-import { IonPage, IonHeader, IonToolbar, IonTitle } from "@ionic/react";
+import { IonPage, IonContent } from "@ionic/react";
+import Header from "../../components/Header";
 
 const Profile = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Profile</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+      <Header title="Profile" small />
+      <IonContent fullscreen>
+        <Header title="Profile" />
+      </IonContent>
     </IonPage>
   );
 };
