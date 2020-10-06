@@ -1,0 +1,7 @@
+{
+  "name": "shOut",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
