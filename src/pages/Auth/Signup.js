@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   IonPage,
   IonContent,
@@ -13,6 +13,7 @@ import {
 import NavHeader from "../../components/NavHeader";
 import { toast } from "../../helpers/toast";
 import useForm from "../../hooks/useForm";
+import validateSignup from "../../validators/validateSignup";
 import firebase from "../../firebase";
 
 const INITIAL_STATE = {
@@ -24,9 +25,10 @@ const INITIAL_STATE = {
 const Signup = (props) => {
   const { handleSubmit, handleChange, values, isSubmitting } = useForm(
     INITIAL_STATE,
+    validateSignup,
     authenticateUser
   );
-  const [busy, setBusy] = React.useState(false);
+  const [busy, setBusy] = useState(false);
 
   async function authenticateUser() {
     setBusy(true);

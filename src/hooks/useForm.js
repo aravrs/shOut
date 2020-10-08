@@ -1,10 +1,10 @@
-import { React, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { toast } from "../helpers/toast";
 
 function useForm(initialState, validate, action) {
-  const [values, setValues] = React.useState(initialState);
-  const [errors, setErrors] = React.useState({});
-  const [isSubmitting, setSubmitting] = React.useState(false);
+  const [values, setValues] = useState(initialState);
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setSubmitting] = useState(false);
 
   useEffect(() => {
     if (isSubmitting) {
