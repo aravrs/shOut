@@ -49,6 +49,7 @@ const Submit = (props) => {
       props.history.push("/");
     }
   }
+
   return (
     <IonPage>
       <Header title="Submit" small />
