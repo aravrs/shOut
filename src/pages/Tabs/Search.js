@@ -1,21 +1,20 @@
-
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { IonContent, IonPage, IonSearchbar } from "@ionic/react";
 import firebase from "../../firebase";
 import LinkItem from "../../components/Link/LinkItem";
 import Header from "../../components/Header/Header";
 
 const Search = () => {
-  const [filteredLinks, setFilteredLinks] = React.useState([]);
-  const [links, setLinks] = React.useState([]);
-  const [filter, setFilter] = React.useState("");
+  const [filteredLinks, setFilteredLinks] = useState([]);
+  const [links, setLinks] = useState([]);
+  const [filter, setFilter] = useState("");
 
-  React.useEffect(() => {
+  useEffect(() => {
     getInitialLinks();
     // eslint-disable-next-line
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     handleSearch();
     // eslint-disable-next-line
   }, [filter]);

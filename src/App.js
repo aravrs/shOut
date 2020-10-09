@@ -32,7 +32,6 @@ import Forgot from "./pages/Auth/Forgot";
 import Link from "./pages/Link";
 
 import useAuth from "./hooks/useAuth";
-import userContext from "./contexts/UserContext";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";

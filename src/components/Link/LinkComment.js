@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import {
   IonCard,
   IonCardContent,
@@ -13,8 +13,8 @@ import CommentModal from "./CommentModal";
 import firebase from "../../firebase";
 
 const LinkComment = ({ comment, link, setLink }) => {
-  const { user } = React.useContext(UserContext);
-  const [showModal, setShowModal] = React.useState(false);
+  const { user } = useContext(UserContext);
+  const [showModal, setShowModal] = useState(false);
 
   const postedByAuthUser = user && user.uid === comment.postedBy.id;
 

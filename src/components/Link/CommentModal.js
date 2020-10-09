@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   IonModal,
   IonHeader,
@@ -11,9 +11,7 @@ import {
 } from "@ionic/react";
 
 const CommentModal = ({ isOpen, title, sendAction, closeAction, comment }) => {
-  const [commentText, setCommentText] = React.useState(
-    comment ? comment.text : ""
-  );
+  const [commentText, setCommentText] = useState(comment ? comment.text : "");
 
   function handleSendAction(item) {
     sendAction(item);

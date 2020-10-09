@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import firebase from "../../firebase";
 import LinkItem from "./LinkItem";
 
 const LinkList = (props) => {
-  const [links, setLinks] = React.useState([]);
+  const [links, setLinks] = useState([]);
   const isTrending = props.location.pathname.includes("trending");
 
-  React.useEffect(() => {
+  useEffect(() => {
     const unsubscribe = getLinks();
     return () => unsubscribe();
     // eslint-disable-next-line

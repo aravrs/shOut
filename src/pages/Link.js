@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useContext, useEffect } from "react";
 import {
   IonPage,
   IonContent,
@@ -21,13 +21,13 @@ import CommentModal from "../components/Link/CommentModal.js";
 const { Browser } = Plugins;
 
 const Link = (props) => {
-  const { user } = React.useContext(UserContext);
-  const [link, setLink] = React.useState(null);
-  const [showModal, setShowModal] = React.useState(false);
+  const { user } = useContext(UserContext);
+  const [link, setLink] = useState(null);
+  const [showModal, setShowModal] = useState(false);
   const linkId = props.match.params.linkId;
   const linkRef = firebase.db.collection("links").doc(linkId);
 
-  React.useEffect(() => {
+  useEffect(() => {
     getLink();
     // eslint-disable-next-line
   }, [linkId]);
@@ -79,10 +79,9 @@ const Link = (props) => {
       props.history.push("/login");
     } else {
       linkRef.get().then((doc) => {
-        if (doc.exists) {
+        if (doc.exists && !doc.data().votes.includes(user.uid)) {
           const previousVotes = doc.data().votes;
-          const vote = { votedBy: { id: user.uid, name: user.displayName } };
-          const updatedVotes = [...previousVotes, vote];
+          const updatedVotes = [...previousVotes, user.uid];
           const voteCount = updatedVotes.length;
           linkRef.update({ votes: updatedVotes, voteCount });
           setLink((prevState) => ({
