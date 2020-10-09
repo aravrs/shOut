@@ -10,7 +10,7 @@ import {
   IonButton,
   IonLoading,
 } from "@ionic/react";
-import NavHeader from "../../components/NavHeader";
+import NavHeader from "../../components/Header/NavHeader";
 import validatePasswordReset from "../../validators/validatePasswordReset";
 import useForm from "../../hooks/useForm";
 import firebase from "../../firebase";

@@ -13,7 +13,7 @@ import {
   IonButton,
   IonGrid,
 } from "@ionic/react";
-import Header from "../../components/Header";
+import Header from "../../components/Header/Header";
 import { toast } from "../../helpers/toast";
 import firebase from "../../firebase";
 import UserContext from "../../contexts/UserContext";

@@ -13,7 +13,7 @@ import {
   IonCol,
   IonButton,
 } from "@ionic/react";
-import NavHeader from "../../components/NavHeader";
+import NavHeader from "../../components/Header/NavHeader";
 import firebase from "../../firebase";
 import validateEditProfile from "../../validators/validateEditProfile";
 

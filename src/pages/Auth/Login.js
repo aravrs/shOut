@@ -11,7 +11,7 @@ import {
   IonRouterLink,
   IonLoading,
 } from "@ionic/react";
-import NavHeader from "../../components/NavHeader";
+import NavHeader from "../../components/Header/NavHeader";
 import validateLogin from "../../validators/validateLogin";
 import useForm from "../../hooks/useForm";
 import firebase from "../../firebase";

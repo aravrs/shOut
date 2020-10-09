@@ -10,7 +10,7 @@ import {
   IonButton,
   IonLoading,
 } from "@ionic/react";
-import NavHeader from "../../components/NavHeader";
+import NavHeader from "../../components/Header/NavHeader";
 import { toast } from "../../helpers/toast";
 import useForm from "../../hooks/useForm";
 import validateSignup from "../../validators/validateSignup";

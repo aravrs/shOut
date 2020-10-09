@@ -9,7 +9,7 @@ import {
   IonCol,
   IonButton,
 } from "@ionic/react";
-import Header from "../../components/Header";
+import Header from "../../components/Header/Header";
 import UserContext from "../../contexts/UserContext";
 import useForm from "../../hooks/useForm";
 import firebase from "../../firebase";
