@@ -35,7 +35,7 @@ const Profile = (props) => {
 
   return (
     <IonPage>
-      <Header title="Search" small />
+      <Header title="Profile" small />
       <IonContent fullscreen>
         <Header title="Profile" />
         {user ? (
