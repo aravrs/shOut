@@ -79,9 +79,13 @@ const Link = (props) => {
       props.history.push("/login");
     } else {
       linkRef.get().then((doc) => {
-        if (doc.exists && !doc.data().votes.includes(user.uid)) {
+        if (doc.exists) {
           const previousVotes = doc.data().votes;
-          const updatedVotes = [...previousVotes, user.uid];
+          const updatedVotes = doc.data().votes.includes(user.uid)
+            ? previousVotes.filter((ele) => {
+                return ele !== user.uid;
+              })
+            : [...previousVotes, user.uid];
           const voteCount = updatedVotes.length;
           linkRef.update({ votes: updatedVotes, voteCount });
           setLink((prevState) => ({
