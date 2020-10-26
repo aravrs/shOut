@@ -3,7 +3,7 @@ import {
   IonCard,
   IonCardContent,
   IonList,
-  IonBadge,
+  IonButton,
   IonLabel,
   IonIcon,
   IonText,
@@ -15,6 +15,7 @@ import {
   personCircleOutline,
   timeOutline,
   chatbubbleEllipsesOutline,
+  caretUp,
 } from "ionicons/icons";
 import { getHostName } from "../../helpers/domain";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
@@ -25,14 +26,25 @@ const LinkItem = ({ link, index, showCount, url, browser }) => {
       <IonCardContent class="ion-no-padding">
         <IonList lines="none">
           <IonItem>
-            <IonBadge
+            <IonButton
               style={{
                 verticalAlign: "middle",
               }}
-              slot="start"
+              slot="end"
+              size="large"
             >
-              {showCount && index}
-            </IonBadge>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flexDirection: "column",
+                }}
+              >
+                <IonIcon icon={caretUp} />
+                {link.voteCount}
+              </div>
+            </IonButton>
             <IonLabel>
               <p
                 style={{
@@ -55,11 +67,15 @@ const LinkItem = ({ link, index, showCount, url, browser }) => {
                   {getHostName(link.url)}
                 </IonText>
               </p>
+              <div className="ion-padding-vertical">
+                <div className="ion-text-wrap">
+                  <strong style={{ fontSize: "1rem" }}>{link.title}</strong>
+                </div>
 
-              <div className="ion-padding-vertical ion-text-wrap">
-                <strong style={{ fontSize: "1rem" }}>{link.description}</strong>
+                <div className="ion-text-wrap" style={{ fontSize: "0.8rem" }}>
+                  {link.description}
+                </div>
               </div>
-
               <p
                 style={{
                   alignItems: "center",

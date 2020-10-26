@@ -1,6 +1,13 @@
 export default function validateCreateLink(values) {
   let errors = {};
 
+  //Title Errors
+  if (!values.title) {
+    errors.title = "A title is required.";
+  } else if (values.title.length < 5) {
+    errors.title = "The title must be at least 5 characters.";
+  }
+
   //Description Errors
   if (!values.description) {
     errors.description = "A description is required.";

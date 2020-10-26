@@ -16,6 +16,7 @@ import firebase from "../../firebase";
 import validateCreateLink from "../../validators/validateCreateLink";
 
 const INITIAL_STATE = {
+  title: "",
   description: "",
   url: "",
 };
@@ -32,8 +33,9 @@ const Submit = (props) => {
     if (!user) {
       props.history.push("/login");
     } else {
-      const { url, description } = values;
+      const { title, url, description } = values;
       const newLink = {
+        title,
         url,
         description,
         postedBy: {
@@ -55,6 +57,16 @@ const Submit = (props) => {
       <Header title="Submit" small />
       <IonContent fullscreen>
         <Header title="Submit" />
+        <IonItem lines="full">
+          <IonLabel position="floating">Title</IonLabel>
+          <IonInput
+            name="title"
+            value={values.title}
+            type="text"
+            onIonChange={handleChange}
+            required
+          ></IonInput>
+        </IonItem>
         <IonItem lines="full">
           <IonLabel position="floating">Description</IonLabel>
           <IonInput
