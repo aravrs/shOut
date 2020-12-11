@@ -1,5 +1,5 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "com.aravrs.shout",
   "appName": "shOut",
   "bundledWebRuntime": false,
   "npmClient": "npm",
