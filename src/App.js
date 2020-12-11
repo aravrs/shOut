@@ -56,9 +56,9 @@ import UserContext from "./contexts/UserContext";
 
 const App = () => {
   // force iOS coz it looks cooler
-  setupConfig({
-    mode: "ios",
-  });
+  // setupConfig({
+  //   mode: "ios",
+  // });
 
   const [user, setUser] = useAuth();
 

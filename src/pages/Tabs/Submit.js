@@ -8,6 +8,7 @@ import {
   IonRow,
   IonCol,
   IonButton,
+  IonTextarea,
 } from "@ionic/react";
 import Header from "../../components/Header/Header";
 import UserContext from "../../contexts/UserContext";
@@ -69,13 +70,13 @@ const Submit = (props) => {
         </IonItem>
         <IonItem lines="full">
           <IonLabel position="floating">Description</IonLabel>
-          <IonInput
+          <IonTextarea
             name="description"
             value={values.description}
             type="text"
             onIonChange={handleChange}
             required
-          ></IonInput>
+          ></IonTextarea>
         </IonItem>
         <IonItem lines="full">
           <IonLabel position="floating">URL</IonLabel>
@@ -88,7 +89,7 @@ const Submit = (props) => {
           ></IonInput>
         </IonItem>
         <IonRow>
-          <IonCol>
+          <IonCol className="ion-margin-horizontal ion-margin-top">
             <IonButton
               type="submit"
               color="primary"

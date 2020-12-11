@@ -62,7 +62,7 @@ const Profile = (props) => {
               </IonCardContent>
             </IonCard>
             <IonRow>
-              <IonCol>
+              <IonCol className="ion-margin-horizontal">
                 <IonButton
                   expand="block"
                   routerLink={"/edit-profile"}
@@ -74,7 +74,7 @@ const Profile = (props) => {
               </IonCol>
             </IonRow>
             <IonRow>
-              <IonCol>
+              <IonCol className="ion-margin-horizontal">
                 <IonButton expand="block" onClick={logoutUser}>
                   Log Out
                 </IonButton>
