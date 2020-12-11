@@ -43,7 +43,7 @@ const Submit = (props) => {
           name: user.displayName,
         },
         voteCount: 1,
-        votes: [],
+        votes: [user.uid],
         comments: [],
         created: Date.now(),
       };

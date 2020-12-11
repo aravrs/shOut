@@ -72,10 +72,10 @@ const LinkComment = ({ comment, link, setLink }) => {
         comment={comment}
       />
       <IonCard>
-        <IonCardContent>
+        <IonCardContent class="ion-no-padding">
           <IonList lines="none">
             <IonItem>
-              <IonLabel class="ion-text-wrap ">
+              <IonLabel class="ion-text-wrap">
                 <p
                   style={{
                     alignItems: "center",

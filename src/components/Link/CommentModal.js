@@ -40,6 +40,7 @@ const CommentModal = ({ isOpen, title, sendAction, closeAction, comment }) => {
           placeholder="Your comment"
           value={commentText}
           onIonChange={(e) => setCommentText(e.target.value)}
+          className="ion-margin"
         />
       </IonContent>
     </IonModal>

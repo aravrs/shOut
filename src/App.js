@@ -8,6 +8,7 @@ import {
   IonTabBar,
   IonTabButton,
   IonIcon,
+  setupConfig,
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import {
@@ -54,7 +55,13 @@ import "./theme/variables.css";
 import UserContext from "./contexts/UserContext";
 
 const App = () => {
+  // force iOS coz it looks cooler
+  setupConfig({
+    mode: "ios",
+  });
+
   const [user, setUser] = useAuth();
+
   return (
     <IonApp>
       <UserContext.Provider value={{ user, setUser }}>

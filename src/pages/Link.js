@@ -123,7 +123,7 @@ const Link = (props) => {
   return (
     <IonPage>
       <NavHeader
-        title={link && link.description}
+        title={link && link.title}
         option={link && postedByAuthUser(link)}
         icon={closeCircleOutline}
         action={handleDeleteLink}
@@ -151,12 +151,14 @@ const Link = (props) => {
               </IonRow>
             </IonGrid>
             {link.comments.map((comment, index) => (
-              <LinkComment
-                key={index}
-                comment={comment}
-                link={link}
-                setLink={setLink}
-              />
+              <div className="ion-margin">
+                <LinkComment
+                  key={index}
+                  comment={comment}
+                  link={link}
+                  setLink={setLink}
+                />
+              </div>
             ))}
           </>
         )}

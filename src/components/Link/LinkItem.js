@@ -11,7 +11,6 @@ import {
 } from "@ionic/react";
 import {
   linkOutline,
-  chevronUpCircleOutline,
   personCircleOutline,
   timeOutline,
   chatbubbleEllipsesOutline,
@@ -83,20 +82,6 @@ const LinkItem = ({ link, index, showCount, url, browser }) => {
                   fontWeight: "normal",
                 }}
               >
-                <IonIcon
-                  icon={chevronUpCircleOutline}
-                  style={{
-                    verticalAlign: "middle",
-                  }}
-                />{" "}
-                <IonText
-                  style={{
-                    verticalAlign: "middle",
-                  }}
-                >
-                  {link.voteCount} points
-                </IonText>
-                {" | "}
                 <IonIcon
                   icon={personCircleOutline}
                   style={{
