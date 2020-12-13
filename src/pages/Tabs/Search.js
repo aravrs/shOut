@@ -41,6 +41,7 @@ const Search = () => {
     const query = filter.toLowerCase();
     const matchedLinks = links.filter((link) => {
       return (
+        link.title.toLowerCase().includes(query) ||
         link.description.toLowerCase().includes(query) ||
         link.url.toLowerCase().includes(query) ||
         link.postedBy.name.toLowerCase().includes(query)
